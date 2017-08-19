@@ -1,0 +1,32 @@
+body {
+  font-size: 20px;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.navbar, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 800;
+}
+
+.navbar p {
+  font-weight: 400;
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.cover {
+  background-color: transparent;
+  top: 100px;
+  color: white;
+  text-align: center;
+}
+
+.alert-message {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}

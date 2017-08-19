@@ -1,0 +1,16 @@
+<% errors = model.errors %>
+
+<% if errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <div class="container">
+        В вашей форме <%= errors.count %> ошибок
+      </div>
+
+      <ul>
+        <% errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

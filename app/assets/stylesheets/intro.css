@@ -1,0 +1,26 @@
+.intro-home, .intro-post, .intro-post-new, .intro-user {
+  /*css for full size background image*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 350px;
+  background-color: #263238;
+  margin-bottom: 50px;
+}
+
+.intro-home {
+  background: url(home.jpg) no-repeat center center;
+}
+
+.intro-post {
+  background: url(post.jpg) no-repeat center center;
+}
+
+.intro-post-new {
+  background: url(post-new.jpg) no-repeat center center;
+}
+
+.intro-user {
+  background: url(who.jpg) no-repeat center center;
+}

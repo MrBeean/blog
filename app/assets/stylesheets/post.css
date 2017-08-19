@@ -1,0 +1,23 @@
+.post-box {
+  margin-bottom: 30px;
+}
+
+.post-box a {
+  color: #333;
+  text-decoration-line: none;
+}
+
+.preview-img {
+  height: 150px;
+  background-color: #e6e6e8;
+}
+
+.post-writer {
+  font-family: 'Cormorant Infant', serif;
+  padding-top: 10px;
+}
+
+.post-text {
+  padding-top: 10px;
+  text-align: justify;
+}
