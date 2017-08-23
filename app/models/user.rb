@@ -1,8 +1,11 @@
 class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :trackable,
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+
   has_many :posts
 
   validates :name, presence: true, length: { maximum: 35 }
-  validates :email, presence: true, length: { maximum: 35 }
-  validates :email, uniqueness: true
-  validates :email, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
 end
