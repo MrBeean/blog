@@ -12,9 +12,6 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-
-      <p id="notice"><%= notice %></p>
-
       <% @posts.each do |post| %>
         <div class="post-box">
           <div class="row">
@@ -28,14 +25,14 @@
             </div>
             <%= link_to post do %>
               <div class="col-lg-12 post-text">
-                <p><%= post.post_preview %></p>
+                <p><%= post.post_preview(250) %></p>
 
                 <!--<%= link_to 'Edit', edit_post_path(post) %>-->
                 <!--<%= link_to 'Destroy', post, method: :delete, data: {confirm: 'Are you sure?'} %>-->
               </div>
             <% end %>
             <div class="col-lg-12 post-writer">
-              Опубликовано пользователем <%= post.user.name %>,
+              Опубликовано пользователем <%= link_to post.user.name, post.user %>,
               <%= post.created_at.strftime('%e.%-m.%Y') %></p>
             </div>
           </div>

@@ -46,9 +46,14 @@
         <div class="navbar-header">
           <%= link_to 'НАЗВАНИЕ БЛОГА', root_path, class: 'navbar-brand', id: 'main' %>
         </div>
-        <!--<button id="login-btn" type="button" class="btn btn-default navbar-btn navbar-right">Войти</button>-->
-        <%= link_to 'Написать', new_post_path , class: 'btn btn-default navbar-btn navbar-right' %>
-        <p class="navbar-text navbar-right">Вошли как пользователь <a href="users/1" class="navbar-link">MrBean</a></p>
+        <% if user_signed_in? %>
+            <%= link_to 'Написать', new_post_path , class: 'btn btn-default navbar-btn navbar-right' %>
+            <p class="navbar-text navbar-right">Вошли как пользователь
+              <%= link_to current_user.name, current_user, class: 'navbar-link' %>
+            </p>
+        <% else %>
+            <%= link_to 'Войти', new_user_session_path, class: 'btn btn-default navbar-btn navbar-right' %>
+        <% end %>
       </div>
     </nav>
 

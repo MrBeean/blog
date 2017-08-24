@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-10">
+    <p><%= post.title %></p>
+    <p class="post-writer"><%= post.post_preview(150) %></p>
+    <p class="post-writer"><%= post.created_at.strftime('%e.%-m.%Y') %></p>
+  </div>
+  <div class="col-sm-2">
+    <% if current_user_can_edit?(post) %>
+        <%= link_to 'Исправить', edit_post_path(post), class: 'btn btn-warning' %>
+  <% end %>
+  </div>
+</div>
+  <hr>

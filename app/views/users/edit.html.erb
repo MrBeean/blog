@@ -2,18 +2,28 @@
   <div class="intro-user">
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1>Редактирование профиля</h1>
+      <% if can_edit_user?(@user) %>
+        <h1>Редактирование профиля</h1>
 
-      <div class="row">
-        <div class="col-md-6 buffer-top">
-          <%= render 'form' %>
+        <div class="row">
+          <div class="col-md-6 buffer-top">
+            <%= render 'form' %>
 
+            <p class="buffer-top">
+              <%= link_to 'Сменить пароль', edit_user_registration_path, class: 'btn btn-default' %>
+            </p>
+          </div>
         </div>
-      </div>
+      <% else %>
+          <h1>Уважаемый, а куда это вы лезете?</h1>
+          <!-- 16:9 aspect ratio -->
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ynVzZOUQB2E"></iframe>
+          </div>
+      <% end %>
     </div>
   </div>
 </div>

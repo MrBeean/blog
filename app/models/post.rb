@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   validates :visible, presence: true
   validates :user, presence: true
 
-  def post_preview
-    self.post.truncate(250)
+  def post_preview(size)
+    self.post.truncate(size)
   end
 end
