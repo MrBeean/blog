@@ -2,7 +2,7 @@
   <div class="intro-home">
 
     <div class="jumbotron cover">
-      <h1>Название Блога</h1>
+      <h1><%= t('app.name') %></h1>
       <p>Всякая перемена, даже перемена к лучшему, всегда сопряжена с неудобствами.</p>
     </div>
 
@@ -33,7 +33,7 @@
             <% end %>
             <div class="col-lg-12 post-writer">
               Опубликовано пользователем <%= link_to post.user.name, post.user %>,
-              <%= post.created_at.strftime('%e.%-m.%Y') %></p>
+              <%= l post.created_at.to_date, format: :default %>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : 'Название блога' %></title>
+    <title><%= content_for?(:title) ? yield(:title) : t('app.name') %></title>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:400i" rel="stylesheet">
@@ -44,7 +44,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <%= link_to 'НАЗВАНИЕ БЛОГА', root_path, class: 'navbar-brand', id: 'main' %>
+          <%= link_to t('app.name'), root_path, class: 'navbar-brand uppcase', id: 'main' %>
         </div>
         <% if user_signed_in? %>
             <%= link_to 'Написать', new_post_path , class: 'btn btn-default navbar-btn navbar-right' %>
@@ -80,7 +80,7 @@
                 <li><%= icon('vimeo-square fa-3x') %></li>
                 <li><%= icon('facebook-official fa-3x') %></li>
               </ul>
-              <p class="text-center">Copyright &copy; Название блога <%= Time.current.year %> </p>
+              <p class="text-center">Copyright &copy; <%= t('app.name') %>  <%= Time.current.year %> </p>
             </div>
           </div>
       </div>

@@ -17,6 +17,10 @@ body {
   padding-right: 10px;
 }
 
+.uppcase {
+  text-transform: uppercase;
+}
+
 .cover {
   background-color: transparent;
   top: 100px;

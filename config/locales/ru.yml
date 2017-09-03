@@ -1,0 +1,25 @@
+ru:
+  activerecord:
+    models:
+      user: 'Пользователь'
+      post: 'Статья'
+    attributes:
+      user:
+        email: 'Email'
+        name: 'Имя'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+      post:
+        title: 'Название'
+        post: 'Статья'
+        datetime: 'Дата и время'
+        visible: 'Невидимость'
+  controllers:
+    posts:
+      created: 'Запись успешно создана.'
+      updated: 'Запись успешно обновлена.'
+      destroyed: 'Запись успешно удалена.'
+    users:
+      updated: 'Ваши данные успешно обновлены'
+  app:
+    name: 'Название блога'

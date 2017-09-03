@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20170823173853) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "post"
-    t.boolean  "visible"
+    t.boolean  "visible",    default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"

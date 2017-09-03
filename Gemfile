@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'devise'
+gem 'devise-i18n'
 gem 'font-awesome-less'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -10,6 +11,8 @@ gem 'jquery-rails'
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.0'
+
+gem 'russian'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'therubyracer'
