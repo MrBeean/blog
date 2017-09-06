@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h2>Edit <%= @user.name %></h2>
+      <h2>Изменить пароль или удалить аккаунт</h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
@@ -20,11 +20,11 @@
         <% end %>
 
         <div class="field">
-          <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+          <%= f.label :password %> <i>(оставьте пустым если не хотите менять пароль)</i><br />
           <%= f.password_field :password, autocomplete: "off" %>
           <% if @minimum_password_length %>
             <br />
-            <em><%= @minimum_password_length %> characters minimum</em>
+            <em><%= t('devise.errors.edit_form', count: @minimum_password_length) %></em>
           <% end %>
         </div>
 
@@ -34,7 +34,7 @@
         </div>
 
         <div class="field">
-          <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+          <%= f.label :current_password %> <i>(для подтверждения введите текущий пароль)</i><br />
           <%= f.password_field :current_password, autocomplete: "off" %>
         </div>
 
@@ -43,13 +43,14 @@
         </div>
       <% end %>
 
-      <h3>Cancel my account</h3>
+      <hr>
+      <h3>Удалить мой аккаунт</h3>
 
-      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name),
-                                data: { confirm: "Are you sure?" }, method: :delete,
-                                class: "btn btn-danger buffer-top"  %></p>
+      <p>Уверены? <%= button_to "Удалить к \"Чертовой бабушке\"", registration_path(resource_name),
+                                data: { confirm: t('devise.delete.confirm') }, method: :delete,
+                                class: "btn btn-danger"  %></p>
 
-      <%= link_to "Back", :back %>
+      <%= link_to "Назад", :back %>
     </div>
   </div>
 </div>

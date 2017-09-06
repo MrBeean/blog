@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-lg-12">
       <% if can_edit_user?(@user) %>
-        <h1>Редактирование профиля</h1>
+        <h1>Редактирование профиля <%= @user.name %></h1>
 
         <div class="row">
           <div class="col-md-6 buffer-top">

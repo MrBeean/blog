@@ -1,4 +1,7 @@
 ru:
+  app:
+    name: 'Название блога'
+
   activerecord:
     models:
       user: 'Пользователь'
@@ -14,6 +17,7 @@ ru:
         post: 'Статья'
         datetime: 'Дата и время'
         visible: 'Невидимость'
+
   controllers:
     posts:
       created: 'Запись успешно создана.'
@@ -23,5 +27,28 @@ ru:
       updated: 'Ваши данные успешно обновлены'
     registrations:
       closed: 'Регистрация пользователей закрыта'
-  app:
-    name: 'Название блога'
+
+  errors:
+    messages:
+      form_not_saved:
+        few: "Cохранение не удалось из-за %{count} ошибок:"
+        many: "Cохранение не удалось из-за %{count} ошибок:"
+        one: "Cохранение не удалось из-за %{count} ошибки:"
+        other: "Cохранение не удалось из-за %{count}  ошибки:"
+    template:
+      body: 'Проблемы возникли со следующими полями:'
+      header:
+        few: "%{model}: сохранение не удалось из-за %{count} ошибок"
+        many: "%{model}: сохранение не удалось из-за %{count} ошибок"
+        one: "%{model}: сохранение не удалось из-за %{count} ошибки"
+        other: "%{model}: сохранение не удалось из-за %{count} ошибки"
+
+  devise:
+    errors:
+      edit_form:
+        few: "%{count} символов минимум"
+        many: "%{count} символов минимум"
+        one: "%{count} символ минимум"
+        other: "%{count} символ минимум"
+    delete:
+      confirm: "Вы уверены?"
