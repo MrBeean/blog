@@ -1,0 +1,18 @@
+/* Pagination change bootstrup styles
+-------------------------------------------------- */
+.pagination>li>a {
+  color: #333;
+}
+
+.pagination>.active>span:hover,
+.pagination>.active>span {
+  background: #333;
+  border-color: #333;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #333;
+}
