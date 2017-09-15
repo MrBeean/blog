@@ -16,7 +16,7 @@ ru:
         title: 'Название'
         post: 'Статья'
         datetime: 'Дата и время'
-        visible: 'Невидимость'
+        visible: 'Видимость'
 
   controllers:
     posts:

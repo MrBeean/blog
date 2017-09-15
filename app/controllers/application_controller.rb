@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  # Хелпер метод, доступный во вьюхах
-  helper_method :current_user_can_edit?, :can_edit_user?
+  # Хелпер методы, доступные во вьюхах
+  helper_method :current_user_can_edit?, :can_edit_user?, :can_see_post?
 
   # Настройка для девайза — разрешаем обновлять профиль, но обрезаем
   # параметры, связанные со сменой пароля.
@@ -33,5 +33,9 @@ class ApplicationController < ActionController::Base
 
   def can_edit_user?(user)
     user_signed_in? && current_user == (user)
+  end
+
+  def can_see_post?(post)
+    post.visible || post.user == current_user
   end
 end
