@@ -50,5 +50,7 @@ ru:
         many: "%{count} символов минимум"
         one: "%{count} символ минимум"
         other: "%{count} символ минимум"
+
+  views:
     delete:
       confirm: "Вы уверены?"

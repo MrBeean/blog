@@ -10,7 +10,7 @@
       <h1 class="text-center"><%= @user.name %></h1>
         <% if can_edit_user?(@user) %>
           <p class="buffer-top text-center">
-            <%= link_to 'Редактировать профиль', edit_user_path(@user), class: 'btn btn-default' %>
+            <%= link_to 'Редактировать пользователя', edit_user_registration_path, class: 'btn btn-default' %>
             <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
           </p>
           <% if @user.posts.any? %>

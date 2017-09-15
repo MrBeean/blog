@@ -5,14 +5,19 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h2>Изменить пароль или удалить аккаунт</h2>
+      <h2>Изменить данные или удалить аккаунт</h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
 
         <div class="field">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autofocus: true %>
+        </div>
+
+        <div class="field">
           <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %>
+          <%= f.email_field :email %>
         </div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -39,7 +44,7 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "Update", class: "btn btn-success buffer-top"  %>
+          <%= f.submit "Обновить данные", class: "btn btn-success buffer-top"  %>
         </div>
       <% end %>
 
@@ -47,7 +52,7 @@
       <h3>Удалить мой аккаунт</h3>
 
       <p>Уверены? <%= button_to "Удалить к \"Чертовой бабушке\"", registration_path(resource_name),
-                                data: { confirm: t('devise.delete.confirm') }, method: :delete,
+                                data: { confirm: t('views.delete.confirm') }, method: :delete,
                                 class: "btn btn-danger"  %></p>
 
       <%= link_to "Назад", :back %>

@@ -21,3 +21,9 @@
   padding-top: 10px;
   text-align: justify;
 }
+
+.button-bottom {
+  position:absolute;
+  bottom:0;
+  margin-bottom:7px;
+}
