@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users/1
   def show
     @user = User.find(params[:id])
+    @user_posts = @user.posts.paginate(page: params[:page], per_page: 5).order('posts.created_at DESC')
   end
 
   # GET /users/1/edit

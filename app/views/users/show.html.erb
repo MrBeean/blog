@@ -17,8 +17,12 @@
           <% if @user.posts.any? %>
             <h1><small>Твои записи:</small></h1>
             <p class="buffer-top">
-              <%= render partial: 'posts/post', collection: @user.posts.order('posts.created_at DESC') %>
+              <%= render partial: 'posts/post', collection: @user_posts %>
             </p>
+              <div class="text-center">
+                <%= will_paginate @user_posts, renderer: BootstrapPagination::Rails,
+                                  previous_label: '&laquo;', next_label: '&raquo;' %>
+              </div>
           <% end %>
         <% end %>
     </div>
