@@ -10,9 +10,9 @@
         <div class="post-box">
           <h1><%= @post.title %></h1>
 
-          <p class="text-justify"><%= @post.post %></p>
+          <p class="text-justify"><%= @post.post.html_safe %></p>
           <div class="post-writer">
-            <p><%= link_to @post.user.name, @post.user %></p>
+            <%= link_to @post.user.name, @post.user %>
           </div>
         </div>
         <%= link_to 'Назад', posts_path, class: 'btn btn-default' %>

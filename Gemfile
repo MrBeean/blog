@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-
+gem 'bootstrap-wysihtml5-rails'
+gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise-i18n'
-gem 'font-awesome-less'
+gem 'font-awesome-sass'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -14,7 +15,8 @@ gem 'rails', '~> 4.2.0'
 
 gem 'rails-i18n', '~> 4.0', '>= 4.0.8'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
+gem 'simple_form'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails', '~> 3.2'
 
