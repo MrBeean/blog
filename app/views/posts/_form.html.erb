@@ -16,6 +16,12 @@
         </div>
 
         <div class="form-group">
+          <%= f.label :mainimg %>
+          <p><%= image_tag(@post.mainimg.url, class: "img-responsive") if @post.mainimg? %></p>
+          <%= f.file_field :mainimg %>
+        </div>
+
+        <div class="form-group">
           <p><em>Чекбокс ниже отвечает за видимость статьи для других пользователей</em></p>
           <%= f.check_box :visible %>
           <%= f.label :visible %>
@@ -23,7 +29,7 @@
 
         <div class="actions">
           <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-          <%= link_to 'Назад', :back , class: 'btn btn-default' %>
+          <%= link_to 'Назад', :back, class: 'btn btn-default' %>
         </div>
 
       </div>

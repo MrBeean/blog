@@ -8,4 +8,6 @@ class Post < ActiveRecord::Base
   def post_preview(size)
     self.post.truncate(size)
   end
+
+  mount_uploader :mainimg, MainimgUploader
 end

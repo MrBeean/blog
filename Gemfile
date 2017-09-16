@@ -4,6 +4,7 @@ gem 'bootstrap-wysihtml5-rails'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise-i18n'
+gem 'carrierwave'
 gem 'font-awesome-sass'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -14,6 +15,7 @@ gem 'pg'
 gem 'rails', '~> 4.2.0'
 
 gem 'rails-i18n', '~> 4.0', '>= 4.0.8'
+gem 'rmagick'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 gem 'simple_form'

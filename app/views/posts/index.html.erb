@@ -21,7 +21,11 @@
                 <h1><%= post.title %></h1>
               <% end %>
               <%= link_to post do %>
-                  <img src="<%= asset_path('post.jpg') %>" alt="..." class="img-responsive">
+                  <% if post.mainimg? %>
+                    <%= image_tag(post.mainimg.url, class: "img-responsive") %>
+                  <% else %>
+                    <img src="<%= asset_path('post.jpg') %>" alt="..." class="img-responsive">
+                  <% end %>
               <% end %>
             </div>
             <%= link_to post do %>

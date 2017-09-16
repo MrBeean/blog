@@ -53,7 +53,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :post, :visible)
+      params.require(:post).permit(:title, :post, :visible, :mainimg)
     end
 
     def set_current_user_post

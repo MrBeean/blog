@@ -9,10 +9,11 @@
       <%= image_tag user_avatar(@user), class: 'center-block img-circle' %>
       <h1 class="text-center"><%= @user.name %></h1>
         <% if can_edit_user?(@user) %>
-          <p class="buffer-top text-center">
-            <%= link_to 'Редактировать пользователя', edit_user_registration_path, class: 'btn btn-default' %>
+          <div class="buffer-top text-center">
+            <%= link_to 'Сменить аватар', edit_user_path, class: 'btn btn-default' %>
+            <%= link_to 'Редактировать данные', edit_user_registration_path, class: 'btn btn-default' %>
             <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
-          </p>
+          </div>
           <% if @user.posts.any? %>
             <h1><small>Твои записи:</small></h1>
             <p class="buffer-top">
