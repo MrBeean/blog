@@ -18,6 +18,7 @@ ru:
         post: 'Статья'
         datetime: 'Дата и время'
         visible: 'Видимость'
+        mainimg: 'Главная картинка'
 
   controllers:
     posts:

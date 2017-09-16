@@ -11,8 +11,11 @@
           <h1><%= @post.title %></h1>
 
           <p class="text-justify"><%= @post.post.html_safe %></p>
-          <div class="post-writer">
-            <%= link_to @post.user.name, @post.user %>
+          <div class="post-writer text-center buffer-top-xl">
+            <%= link_to @post.user do %>
+              <p><%= image_tag user_avatar(@post.user), class: 'img-circle' %></p>
+              <p><%= @post.user.name%></p>
+            <% end %>
           </div>
         </div>
         <%= link_to 'Назад', posts_path, class: 'btn btn-default' %>
