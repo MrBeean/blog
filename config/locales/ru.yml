@@ -12,6 +12,7 @@ ru:
         name: 'Имя'
         password: 'Пароль'
         avatar: 'Аватарка'
+        info: 'Инфо'
         password_confirmation: 'Подтверждение пароля'
       post:
         title: 'Название'

@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :posts
 
   validates :name, presence: true, length: { maximum: 35 }
+  validates :info, length: { maximum: 500 }
 
   mount_uploader :avatar, AvatarUploader
 end

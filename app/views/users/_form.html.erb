@@ -3,8 +3,16 @@
 
   <div class="form-group">
     <%= f.label :avatar %>
+    <p>Размер аватарки должен составлять 150х150</p>
     <p><%= image_tag(@user.avatar.url) if @user.avatar? %></p>
     <%= f.file_field :avatar %>
+  </div>
+
+  <hr>
+
+  <div class="form-group">
+    <p>Расскажи немного о себе:</p>
+    <%= f.input :info, as: :text, input_html: { :rows => 5 } %>
   </div>
 
   <div class="actions buffer-top">

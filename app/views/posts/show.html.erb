@@ -11,20 +11,29 @@
           <h1><%= @post.title %></h1>
 
           <p class="text-justify"><%= @post.post.html_safe %></p>
-          <div class="post-writer text-center buffer-top-xl">
-            <%= link_to @post.user do %>
-              <p><%= image_tag user_avatar(@post.user), class: 'img-circle' %></p>
-              <p><%= @post.user.name%></p>
-            <% end %>
+
+          <hr>
+          <div class="col-lg-12">
+            <div class="col-md-2">
+              <div class="text-center buffer-top-xl buffer-bottom-xl">
+                <%= link_to @post.user do %>
+                  <p><%= image_tag user_avatar(@post.user), class: 'img-circle' %></p>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-10">
+              <p class="paragraf buffer-top-xl buffer-bottom-xl text-justify post-writer"><%= @post.user.info%></p>
+            </div>
           </div>
         </div>
+
         <%= link_to 'Назад', posts_path, class: 'btn btn-default' %>
         <% if current_user_can_edit?(@post) %>
-            <%= link_to 'Исправить', edit_post_path(@post), class: 'btn btn-warning' %>
-            <div class="pull-right">
-              <%= link_to 'Удалить', post_path(@post), method: :delete,
+          <%= link_to 'Исправить', edit_post_path(@post), class: 'btn btn-warning' %>
+          <div class="pull-right">
+            <%= link_to 'Удалить', post_path(@post), method: :delete,
                           data: { confirm: t('views.delete.confirm') }, class: 'btn btn-danger' %>
-            </div>
+          </div>
         <% end %>
       <% end %>
     </div>

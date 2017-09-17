@@ -10,8 +10,8 @@
       <h1 class="text-center"><%= @user.name %></h1>
         <% if can_edit_user?(@user) %>
           <div class="buffer-top text-center">
-            <%= link_to 'Сменить аватар', edit_user_path, class: 'btn btn-default' %>
-            <%= link_to 'Редактировать данные', edit_user_registration_path, class: 'btn btn-default' %>
+            <%= link_to 'Редактировать аватар/инфо', edit_user_path, class: 'btn btn-default' %>
+            <%= link_to 'Сменить пароль', edit_user_registration_path, class: 'btn btn-default' %>
             <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
           </div>
           <% if @user.posts.any? %>
