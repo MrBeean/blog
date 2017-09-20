@@ -2,7 +2,11 @@
   <hr>
   <div class="col-sm-12">
     <%= link_to post do %>
-      <h2><%= post.title %></h2>
+      <% if post.visible %>
+        <h2><%= post.title %></h2>
+      <% else %>
+        <h2><mark><%= post.title %></mark></h2>
+      <% end %>
     <% end %>
     <p class="post-writer"><%= strip_tags(post.post_preview(150)) %></p>
     <p class="post-writer"><%= post.created_at.strftime('%e.%-m.%Y') %></p>
