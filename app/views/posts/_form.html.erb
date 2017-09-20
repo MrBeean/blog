@@ -7,7 +7,10 @@
         <div class="form-group">
           <%= f.input :title %>
         </div>
-
+        <p class="buffer-top-xl"><em>
+          Для вставки vimeo видео используй конструкцию "vimeovideo:233459603"<br>
+          Где номер после двоеточия - это номер видео на vimeo
+        </em></p>
         <div class="form-group">
           <%= f.input :post, as: :wysihtml5,
                       wysihtml5: ({'toolbar': {'font-styles': false, 'blockquote': false}}),

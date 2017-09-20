@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
 
   before_save do
     prepeare_post(self.post)
+    prepeare_vimeo(self.post)
   end
 
   validates :title, presence: true, length: {maximum: 255}
@@ -19,5 +20,12 @@ class Post < ActiveRecord::Base
 
   def prepeare_post(post)
     post.gsub!(/<img alt=""/, '<img class="img-responsive" alt=""')
+  end
+
+  def prepeare_vimeo(post)
+    video = post.match(/\bvimeovideo:(\d+)/).captures.first
+    post.gsub!(/\bvimeovideo:\d+/, '<div class="embed-responsive embed-responsive-16by9">
+               <iframe class="embed-responsive-item" src="//player.vimeo.com/video/' + video + '"></iframe>
+               </div>')
   end
 end
