@@ -2,10 +2,12 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-wysihtml5-rails'
 gem 'bootstrap-sass'
+gem 'contact_us', '~> 1.0.1'
+gem 'carrierwave'
 gem 'devise'
 gem 'devise-i18n'
-gem 'carrierwave'
 gem 'font-awesome-sass'
+gem 'figaro'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 

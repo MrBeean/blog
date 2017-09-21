@@ -1,4 +1,4 @@
-.intro-home, .intro-post, .intro-post-new, .intro-user {
+.intro-home, .intro-post, .intro-post-new, .intro-user, .contact-user {
   /*css for full size background image*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -23,4 +23,8 @@
 
 .intro-user {
   background: url(who.jpg) no-repeat center center;
+}
+
+.contact-user {
+  background: url(letter.jpg) no-repeat center center;
 }

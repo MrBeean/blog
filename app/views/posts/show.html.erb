@@ -16,13 +16,15 @@
           <div class="col-lg-12">
             <div class="col-md-2">
               <div class="text-center buffer-top-xl buffer-bottom-xl">
-                <%= link_to @post.user do %>
+                <%= link_to '/contact-us' do %>
                   <p><%= image_tag user_avatar(@post.user), class: 'img-circle' %></p>
                 <% end %>
               </div>
             </div>
             <div class="col-md-10">
-              <p class="paragraf buffer-top-xl buffer-bottom-xl text-justify post-writer"><%= @post.user.info%></p>
+              <%= link_to '/contact-us' do %>
+                <p class="paragraf buffer-top-xl buffer-bottom-xl text-justify post-writer"><%= @post.user.info%></p>
+              <% end %>
             </div>
           </div>
         </div>
