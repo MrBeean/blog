@@ -34,7 +34,7 @@
               </div>
             <% end %>
             <div class="col-lg-12 post-writer">
-              Опубликовано пользователем <%= link_to post.user.name, post.user %>,
+              Опубликовано пользователем <strong><%= link_to post.user.name, post.user %></strong>,
               <%= l post.created_at.to_date, format: :default %>
             </div>
           </div>

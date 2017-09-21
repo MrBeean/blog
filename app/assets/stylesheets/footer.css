@@ -7,3 +7,7 @@ footer {
 footer p {
   margin: 30px 0;
 }
+
+.social-links a:hover {
+  color: #000;
+}
