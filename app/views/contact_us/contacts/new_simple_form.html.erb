@@ -6,7 +6,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h2>Есть что сказать? Напишите мне</h2>
+      <h2>Есть что сказать? Напишите мне!</h2>
       <%= simple_form_for @contact, :url => contacts_path do |f| %>
         <%= f.input :name, :label => t('.name') if ContactUs.require_name %>
         <%= f.input :email, :label => t('.email') %>
