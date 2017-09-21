@@ -1,0 +1,23 @@
+<div class="intro">
+  <div class="contact-user">
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Есть что сказать? Напишите мне</h2>
+      <%= simple_form_for @contact, :url => contacts_path do |f| %>
+        <%= f.input :name, :label => t('.name') if ContactUs.require_name %>
+        <%= f.input :email, :label => t('.email') %>
+        <%= f.input :subject, :label => t('.subject') if ContactUs.require_subject %>
+        <%= f.input :message, :as => :text, :label => t('.message') %>
+        <%= f.button :submit, :value => t('.submit'), :alt => t('.submit'),
+                     :id => 'contact_us_contact_submit',
+                     :title => t('.submit'), class: 'btn btn-primary' %>
+
+        <%= link_to 'Назад', :back, class: 'btn btn-default' %>
+      <% end %>
+    </div>
+  </div>
+</div>

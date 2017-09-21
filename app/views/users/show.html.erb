@@ -8,23 +8,30 @@
     <div class="col-lg-12">
       <%= image_tag user_avatar(@user), class: 'center-block img-circle' %>
       <h1 class="text-center"><%= @user.name %></h1>
-        <% if can_edit_user?(@user) %>
-          <div class="buffer-top text-center">
-            <%= link_to 'Редактировать аватар/инфо', edit_user_path, class: 'btn btn-default' %>
-            <%= link_to 'Сменить пароль', edit_user_registration_path, class: 'btn btn-default' %>
-            <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
-          </div>
-          <% if @user.posts.any? %>
-            <h1><small>Твои записи:</small></h1>
-            <p class="buffer-top">
-              <%= render partial: 'posts/post', collection: @user_posts %>
-            </p>
-              <div class="text-center">
-                <%= will_paginate @user_posts, renderer: BootstrapPagination::Rails,
-                                  previous_label: '&laquo;', next_label: '&raquo;' %>
-              </div>
-          <% end %>
+
+      <div class="buffer-top text-center">
+        <p class="paragraf buffer-top-xl buffer-bottom-xl text-justify post-writer"><%= @user.info%></p>
+        <%= link_to '/contact-us', class: 'btn btn-default' do %>
+            Написать мне <i class="fa fa-envelope-o fa-lg"></i>
         <% end %>
+      </div>
+      <% if can_edit_user?(@user) %>
+        <div class="buffer-top text-center">
+          <%= link_to 'Редактировать аватар/инфо', edit_user_path, class: 'btn btn-default' %>
+          <%= link_to 'Сменить пароль', edit_user_registration_path, class: 'btn btn-default' %>
+          <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
+        </div>
+        <% if @user.posts.any? %>
+          <h1><small>Твои записи:</small></h1>
+          <p class="buffer-top">
+            <%= render partial: 'posts/post', collection: @user_posts %>
+          </p>
+            <div class="text-center">
+              <%= will_paginate @user_posts, renderer: BootstrapPagination::Rails,
+                                previous_label: '&laquo;', next_label: '&raquo;' %>
+            </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
