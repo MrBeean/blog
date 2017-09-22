@@ -16,6 +16,7 @@ gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.0'
 gem 'rails-i18n', '~> 4.0', '>= 4.0.8'
+gem 'recaptcha', require: 'recaptcha/rails'
 gem 'rmagick'
 # Use SCSS for stylesheets
 gem 'sass-rails'

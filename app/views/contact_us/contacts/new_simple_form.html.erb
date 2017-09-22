@@ -1,5 +1,6 @@
+<!--ToDo удали меня когда переделаешь контроллер с обратной формой-->
 <div class="intro">
-  <div class="contact-user">
+  <div class="contact-form">
   </div>
 </div>
 
@@ -13,6 +14,9 @@
         <%= f.input :email, :label => t('.email') %>
         <%= f.input :subject, :label => t('.subject') if ContactUs.require_subject %>
         <%= f.input :message, :as => :text, :label => t('.message') %>
+
+        <%= recaptcha_tags %>
+
         <%= f.button :submit, :value => t('.submit'), :alt => t('.submit'),
                      :id => 'contact_us_contact_submit',
                      :title => t('.submit'), class: 'btn btn-primary' %>
