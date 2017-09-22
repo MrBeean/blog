@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   belongs_to :user
 
+  is_impressionable
+
   before_save do
     prepeare_post(self.post)
     prepeare_vimeo(self.post)
