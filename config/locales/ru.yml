@@ -19,7 +19,7 @@ ru:
         post: 'Статья'
         datetime: 'Дата и время'
         visible: 'Видимость'
-        mainimg: 'Главная картинка'
+        mainimg: 'Основное изображение'
 
   controllers:
     posts:
