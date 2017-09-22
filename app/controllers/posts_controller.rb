@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show]
   before_action :set_current_user_post, only: [:edit, :update, :destroy]
 
+  impressionist :actions=>[:show,:index]
+
   # GET /posts
   def index
     @posts = Post.paginate(page: params[:page], per_page: 5).order('posts.created_at DESC')

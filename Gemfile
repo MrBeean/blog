@@ -10,6 +10,7 @@ gem 'font-awesome-sass'
 gem 'figaro'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'impressionist'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
