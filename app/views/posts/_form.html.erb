@@ -20,7 +20,7 @@
 
         <div class="form-group">
           <%= f.label :mainimg %>
-          <p>Размер картинки должен составлять 1900x350</p>
+          <p>Размер изображения должен составлять 1900x350</p>
           <p><%= image_tag(@post.mainimg.url, class: "img-responsive") if @post.mainimg? %></p>
           <%= f.file_field :mainimg %>
         </div>
