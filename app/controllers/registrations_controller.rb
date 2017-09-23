@@ -9,4 +9,10 @@ class RegistrationsController < Devise::RegistrationsController
     flash[:info] = I18n.t('controllers.registrations.closed.')
     redirect_to root_path
   end
+
+  protected
+
+  def after_update_path_for(resource)
+    user_path(resource)
+  end
 end
