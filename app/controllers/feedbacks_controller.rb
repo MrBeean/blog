@@ -5,7 +5,7 @@ class FeedbacksController < ApplicationController
     @feedback = @user.feedbacks.build(feedback_params)
     @feedback.user = @user
 
-    if @feedback.save
+    if check_captcha(@feedback) && @feedback.save
       redirect_to @user, notice: I18n.t('controllers.feedbacks.created')
     else
       render 'users/show', alert: I18n.t('controllers.feedbacks.error')
@@ -20,5 +20,13 @@ class FeedbacksController < ApplicationController
 
   def feedback_params
     params.require(:feedback).permit(:name, :email, :message)
+  end
+
+  def check_captcha(feedback)
+    if current_user.present?
+      true
+    else
+      verify_recaptcha(model: feedback, message: I18n.t('controllers.feedbacks.recaptcha.error'))
+    end
   end
 end

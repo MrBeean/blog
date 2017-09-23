@@ -7,7 +7,9 @@
     <%= f.input :message, :as => :text %>
   </div>
 
-  <div class="form-actions">
+  <%= recaptcha_tags %>
+
+  <div class="form-actions buffer-top">
     <%= f.button :submit, value: 'Отправить сообщение', class: 'btn btn-primary' %>
   </div>
 <% end %>

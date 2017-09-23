@@ -38,6 +38,8 @@ ru:
     feedbacks:
       created: 'Сообщение успешно отправлено'
       error: 'Что-то пошло не так'
+      recaptcha:
+        error: 'Ошибка recaptcha, Вы робот?'
 
   errors:
     messages:
