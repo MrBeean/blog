@@ -6,6 +6,7 @@ ru:
     models:
       user: 'Пользователь'
       post: 'Статья'
+      feedback: 'Форма обратной связи'
     attributes:
       user:
         email: 'Email'
@@ -20,6 +21,10 @@ ru:
         datetime: 'Дата и время'
         visible: 'Видимость'
         mainimg: 'Основное изображение'
+      feedback:
+        name: 'Ваше имя'
+        email: 'Email'
+        message: 'Текст сообщения'
 
   controllers:
     posts:
@@ -30,6 +35,9 @@ ru:
       updated: 'Ваши данные успешно обновлены'
     registrations:
       closed: 'Регистрация пользователей закрыта'
+    feedbacks:
+      created: 'Сообщение успешно отправлено'
+      error: 'Что-то пошло не так'
 
   errors:
     messages:

@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
 
   has_many :posts
+  has_many :feedbacks
 
   validates :name, presence: true, length: { maximum: 35 }
   validates :info, length: { maximum: 500 }

@@ -52,8 +52,6 @@ GEM
       mime-types (>= 1.16)
     commonjs (0.2.7)
     concurrent-ruby (1.0.5)
-    contact_us (1.0.1)
-      rails (>= 4.2.0)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -61,6 +59,8 @@ GEM
       responders
       warden (~> 1.2.3)
     devise-i18n (1.2.0)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -93,10 +93,10 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_portile2 (2.2.0)
+    mini_portile2 (2.3.0)
     minitest (5.10.3)
-    nokogiri (1.8.0)
-      mini_portile2 (~> 2.2.0)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
     rack (1.6.8)
@@ -190,9 +190,9 @@ DEPENDENCIES
   bootstrap-wysihtml5-rails
   byebug
   carrierwave
-  contact_us (~> 1.0.1)
   devise
   devise-i18n
+  email_validator
   figaro
   font-awesome-sass
   impressionist
@@ -211,4 +211,4 @@ DEPENDENCIES
   will_paginate-bootstrap
 
 BUNDLED WITH
-   1.15.3
+   1.15.4

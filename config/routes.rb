@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :posts
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update] do
+    resources :feedbacks, only: [:create]
+  end
 end
