@@ -1,0 +1,52 @@
+<h1>FeedbackMailer#feedback</h1>
+
+<p>
+  <%= @greeting %>, find me in app/views/feedback_mailer/feedback.html.erb
+</p>
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <style type="text/css">
+    .bodyBody {
+      margin: 10px;
+      font-size: 1.50em;
+    }
+    .divReturnAddress {
+      text-align: left;
+      float: right;
+    }
+    .divSubject {
+      clear: both;
+      font-weight: bold;
+      padding-top: 80px;
+    }
+    .divAdios {
+      float: right;
+      padding-top: 50px;
+    }
+  </style>
+</head>
+<body class="bodyBody">
+<div class="divReturnAddress">
+  <%= @name %>
+  <%=  @author_email %>
+  <%=  @date %>
+</div>
+
+<div class="divSubject">
+  Новое сообщение от пользователя
+</div>
+
+<div class="divContents">
+  <p>
+    <%= @message %>
+  </p>
+</div>
+
+<div class="divAdios">
+  Письмо отправлено автоматически
+</div>
+</body>
+</html>
