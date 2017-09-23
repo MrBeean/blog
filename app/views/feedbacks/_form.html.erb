@@ -1,0 +1,13 @@
+<%= simple_form_for [@user, feedback] do |f| %>
+  <%= render partial: 'partials/form_errors', locals: {model: feedback } %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :message, :as => :text %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, value: 'Отправить сообщение', class: 'btn btn-primary' %>
+  </div>
+<% end %>
