@@ -1,15 +1,21 @@
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-lg-12">
   <hr>
-
-    <%= link_to post do %>
-      <% if post.visible %>
-            <h4><%= post.title %></h4>
-      <% else %>
-            <h4><mark><%= post.title %></mark></h4>
+    <div class="col-md-10">
+      <%= link_to post do %>
+          <% if post.visible %>
+              <h4><%= post.title %></h4>
+          <% else %>
+              <h4><mark><%= post.title %></mark></h4>
+          <% end %>
       <% end %>
-    <% end %>
-    <p class="post-writer"><%= strip_tags(post.post_preview(150)) %></p>
-    <p class="post-writer"><%= post.created_at.strftime('%e.%-m.%Y') %></p>
+    </div>
+    <div class="col-md-2 text-right">
+      <%= "Просмотров: #{post.impressionist_count(:filter=>:session_hash)}" %>
+    </div>
+    <div class="col-lg-12">
+      <p class="post-writer"><%= strip_tags(post.post_preview(150)) %></p>
+      <p class="post-writer"><%= post.created_at.strftime('%e.%-m.%Y') %></p>
+    </div>
   </div>
 </div>

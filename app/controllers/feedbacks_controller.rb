@@ -6,8 +6,9 @@ class FeedbacksController < ApplicationController
     @feedback.user = @user
 
     if check_captcha(@feedback) && @feedback.save
+      # ToDo Разобраться с отправкой почты
+      # FeedbackMailer.feedback(@feedback).deliver_now
       redirect_to @user, notice: I18n.t('controllers.feedbacks.created')
-      FeedbackMailer.feedback(@feedback).deliver_now
     else
       render 'users/show', alert: I18n.t('controllers.feedbacks.error')
     end

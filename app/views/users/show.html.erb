@@ -19,21 +19,23 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-6 buffer-top">
-      <h2>Кто автор?</h2>
-      <div class="text-center">
-        <p class="paragraf buffer-top-xl buffer-bottom-xl text-justify post-writer">
-          <%= @user.info%>
-        </p>
+  <% unless can_edit_user?(@user) %>
+    <div class="row">
+      <div class="col-md-6 buffer-top">
+        <h2>Кто автор?</h2>
+        <div class="text-center">
+          <p class="paragraf buffer-top-xl buffer-bottom-xl text-justify post-writer">
+            <%= @user.info%>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 buffer-top">
+        <h2>Есть что сказать?</h2>
+        <%= render partial: 'feedbacks/form',
+                   locals: {feedback: @feedback || @user.feedbacks.build} %>
       </div>
     </div>
-    <div class="col-md-6 buffer-top">
-      <h2>Есть что сказать?</h2>
-      <%= render partial: 'feedbacks/form',
-                 locals: {feedback: @feedback || @user.feedbacks.build} %>
-    </div>
-  </div>
+  <% end %>
 
   <div class="row">
     <div class="col-lg-12">

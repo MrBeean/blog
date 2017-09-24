@@ -32,3 +32,17 @@
   background-color: #2E2F30;
   margin-bottom: 30px;
 }
+
+.column-1-4 {
+  float: left;
+  width: 25%;
+}
+
+.column-3-4 {
+  float: left;
+  width: 75%;
+}
+
+.column-4 {
+  width: 100%;
+}
