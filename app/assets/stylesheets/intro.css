@@ -10,21 +10,21 @@
 }
 
 .intro-home {
-  background: url(home.jpg) no-repeat center center;
+  background: asset-data-url(home.jpg) no-repeat center center;
 }
 
 .intro-post {
-  background: url(post.jpg) no-repeat center center;
+  background: asset-data-url(post.jpg) no-repeat center center;
 }
 
 .intro-post-new {
-  background: url(post-new.jpg) no-repeat center center;
+  background: asset-data-url(post-new.jpg) no-repeat center center;
 }
 
 .intro-user {
-  background: url(who.jpg) no-repeat center center;
+  background: asset-data-url(who.jpg) no-repeat center center;
 }
 
 .contact-form {
-  background: url(letter.jpg) no-repeat center center;
+  background: asset-data-url(letter.jpg) no-repeat center center;
 }
