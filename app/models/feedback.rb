@@ -4,6 +4,7 @@ class Feedback < ActiveRecord::Base
   validates :email, email: true
   validates :email, presence: true
   validates :message, presence: true
+  validates :name, presence: true
 
   validates :name, length: { maximum: 40 }
   validates :name, format: { with: /\A[\w]*\z/, message: 'Тлько английские буквы и цифры & _' }
