@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   is_impressionable
 
   before_save do
-    prepeare_post(self.post)
+    prepeare_img(self.post)
     prepeare_vimeo(self.post)
   end
 
@@ -20,7 +20,7 @@ class Post < ActiveRecord::Base
 
   private
 
-  def prepeare_post(post)
+  def prepeare_img(post)
     post.gsub!(/<img alt=""/, '<img class="img-responsive" alt=""')
   end
 

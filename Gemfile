@@ -31,4 +31,14 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'simplecov', require: false
 end
