@@ -201,7 +201,7 @@ DEPENDENCIES
   devise-i18n
   email_validator
   figaro
-  font-awesome-sass
+  font-awesome-sass (~> 5.0.9)
   impressionist
   jquery-rails
   pg

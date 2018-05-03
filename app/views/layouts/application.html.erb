@@ -77,14 +77,14 @@
             <div class="col-lg-12 text-center">
               <ul class="list-inline social-links">
                 <li>
-                  <%= icon('instagram fa-3x') %>
+                  <%= icon('fab', 'instagram fa-3x', id: 'instagram') %>
                 </li>
                 <li>
                   <%= link_to 'https://vimeo.com/user26443830', target: 'blank' do %>
-                    <%= icon('vimeo-square fa-3x') %>
+                    <%= icon('fab', 'vimeo-square fa-3x', id: 'vimeo') %>
                   <% end %>
                 </li>
-                <li><%= icon('facebook-official fa-3x') %></li>
+                <li><%= icon('fab', 'facebook-square fa-3x', id: 'facebook') %></li>
               </ul>
               <p class="text-center">Copyright &copy; <%= t('app.name') %>  <%= Time.current.year %> </p>
             </div>

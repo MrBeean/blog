@@ -6,7 +6,7 @@ gem 'carrierwave'
 gem 'devise'
 gem 'devise-i18n'
 gem 'email_validator'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 5.0.9'
 gem 'figaro'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
